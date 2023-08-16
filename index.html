@@ -89,10 +89,10 @@
           </div>
           <div class="col-7 ml-5 bg-light">
             <!-- <h4>Recommended weight range Your current weight is in this range.</h4> <input type="text" id="currentweight" class="form-control col-2 mb-2"  readonly> -->
-            <h5>Recommended weight range for week#  <span style="color: green;">
-              <div id="result"></div></span></h5>
+            <h5>Recommended weight range for </h5><br>  <h5><span style="color: green;">
+              <div id="result"></div><br><div id="result1"></div><br><br></span></h5>
            <!-- <h4>Recommended weight range when delivering (40th week):</h4> <input type="text" id="recweight" class="form-control col-4 mt-3 mb-2"  readonly> -->
-           <h5><label for="">Recommended weight range when delivering (40th week): 62.7 - 68.1 kgs.</label></h5>
+           <!-- <h5><label for="">Recommended weight range when delivering (40th week): 62.7 - 68.1 kgs.</label></h5> -->
            <h4> Your BMI before pregnancy:</h4><input type="text" id="beforebmi" class="form-control col-2 mt-3 mb-2"  readonly>
            <p>Your weight category: <span id="weightCategory"></span></p>
 
@@ -100,6 +100,8 @@
           
 <!-- Your HTML content here -->
 
+
+<!-- 
 <script>
     $(document).ready(function () {
         $("#calculate").click(function () {
@@ -127,9 +129,179 @@
                 $("#weightCategory").text("Obese");
             }
 
-            // Calculate recommended weight range for the selected week
-            // ... (your switch cases here)
-            switch (week) {
+            var twinOption = $("input[name='flexRadioDefault']:checked").attr("id");
+
+            if (twinOption === "twin2") {
+                switch (week) {
+                    
+    case 1:
+        startingWeightMin = 50.0;
+        startingWeightMax = 50.0;
+        break;
+    case 2:
+        startingWeightMin = 50.0;
+        startingWeightMax = 50.2;
+        break;
+    case 3:
+        startingWeightMin = 50.1;
+        startingWeightMax = 50.3;
+        break;
+    case 4:
+        startingWeightMin = 50.1;
+        startingWeightMax = 50.5;
+        break;
+    case 5:
+        startingWeightMin = 50.2;
+        startingWeightMax = 50.7;
+        break;
+    case 6:
+        startingWeightMin = 50.2;
+        startingWeightMax = 50.8;
+        break;
+    case 7:
+        startingWeightMin = 50.2;
+        startingWeightMax = 51.0;
+        break;
+    case 8:
+        startingWeightMin = 50.3;
+        startingWeightMax = 51.2;
+        break;
+    case 9:
+        startingWeightMin = 50.3;
+        startingWeightMax = 51.3;
+        break;
+    case 10:
+        startingWeightMin = 50.4;
+        startingWeightMax = 51.5;
+        break;
+    case 11:
+        startingWeightMin = 50.4;
+        startingWeightMax = 51.7;
+        break;
+    case 12:
+        startingWeightMin = 50.5;
+        startingWeightMax = 51.8;
+        break;
+    case 13:
+        startingWeightMin = 50.5;
+        startingWeightMax = 52.0;
+        break;
+    case 14:
+        startingWeightMin = 51.1;
+        startingWeightMax = 52.8;
+        break;
+    case 15:
+        startingWeightMin = 51.7;
+        startingWeightMax = 53.7;
+        break;
+    case 16:
+        startingWeightMin = 52.3;
+        startingWeightMax = 54.5;
+        break;
+    case 17:
+        startingWeightMin = 52.9;
+        startingWeightMax = 55.3;
+        break;
+    case 18:
+        startingWeightMin = 53.5;
+        startingWeightMax = 56.2;
+        break;
+    case 19:
+        startingWeightMin = 54.1;
+        startingWeightMax = 57.0;
+        break;
+    case 20:
+        startingWeightMin = 54.7;
+        startingWeightMax = 57.8;
+        break;
+    case 21:
+        startingWeightMin = 55.3;
+        startingWeightMax = 58.7;
+        break;
+    case 22:
+        startingWeightMin = 55.9;
+        startingWeightMax = 59.5;
+        break;
+    case 23:
+        startingWeightMin = 56.5;
+        startingWeightMax = 60.3;
+        break;
+    case 24:
+        startingWeightMin = 57.1;
+        startingWeightMax = 61.2;
+        break;
+    case 25:
+        startingWeightMin = 57.7;
+        startingWeightMax = 62.0;
+        break;
+    case 26:
+        startingWeightMin = 58.3;
+        startingWeightMax = 62.8;
+        break;
+    case 27:
+        startingWeightMin = 58.9;
+        startingWeightMax = 63.7;
+        break;
+    case 28:
+        startingWeightMin = 59.5;
+        startingWeightMax = 64.5;
+        break;
+    case 29:
+        startingWeightMin = 60.1;
+        startingWeightMax = 65.3;
+        break;
+    case 30:
+        startingWeightMin = 60.8;
+        startingWeightMax = 66.2;
+        break;
+    case 31:
+        startingWeightMin = 61.4;
+        startingWeightMax = 67.0;
+        break;
+    case 32:
+        startingWeightMin = 62.0;
+        startingWeightMax = 67.8;
+        break;
+    case 33:
+        startingWeightMin = 62.6;
+        startingWeightMax = 68.7;
+        break;
+    case 34:
+        startingWeightMin = 63.2;
+        startingWeightMax = 69.5;
+        break;
+    case 35:
+        startingWeightMin = 63.8;
+        startingWeightMax = 70.3;
+        break;
+    case 36:
+        startingWeightMin = 64.4;
+        startingWeightMax = 71.2;
+        break;
+    case 37:
+        startingWeightMin = 65.0;
+        startingWeightMax = 72.0;
+        break;
+    case 38:
+        startingWeightMin = 65.6;
+        startingWeightMax = 72.8;
+        break;
+    case 39:
+        startingWeightMin = 66.2;
+        startingWeightMax = 73.7;
+        break;
+    case 40:
+        startingWeightMin = 66.8;
+        startingWeightMax = 74.5;
+        break;
+    default:
+        startingWeightMin = 0;
+        startingWeightMax = 0;
+}
+                
+            } else {
+                switch (week) {
+                   
                         case 1:
                     startingWeightMin = 50.0;
                     startingWeightMax = 50.0;
@@ -294,18 +466,23 @@
                     startingWeightMin = 0;
                     startingWeightMax = 0;
                     }
+                
+                }
+            
 
-            weekMessage = `${week}: ${startingWeightMin} - ${startingWeightMax} kgs.`;
+                // weekMessage = `${week}: ${startingWeightMin} - ${startingWeightMax} kgs.`;
 
-            if (nowweight >= startingWeightMin && nowweight <= startingWeightMax) {
-                $("#result").text(weekMessage + " Your current weight is in this range.");
-            } else {
-                var diff = nowweight < startingWeightMin
-                    ? (startingWeightMin - nowweight).toFixed(1)
-                    : (nowweight - startingWeightMax).toFixed(1);
-                $("#result").text(weekMessage + ` Your current weight is ${diff} kgs ${nowweight < startingWeightMin ? "below" : "above"} the recommended range.`);
-            }
-        });
+         if (nowweight >= startingWeightMin && nowweight <= startingWeightMax) {
+            var weekMessage = `${week}: ${startingWeightMin} - ${startingWeightMax} kgs. Your current weight is in this range.`;
+            $("#result").text(weekMessage);
+        } else {
+            var diff = nowweight < startingWeightMin
+                ? (startingWeightMin - nowweight).toFixed(1)
+                : (nowweight - startingWeightMax).toFixed(1);
+            var weekMessage = `${week}: ${startingWeightMin} - ${startingWeightMax} kgs. Your current weight is ${diff} kgs ${nowweight < startingWeightMin ? "below" : "above"} the recommended range.`;
+            $("#result").text(weekMessage);
+        }
+});
 
         // Handle the clear button click
         $("#Clear").click(function () {
@@ -321,6 +498,400 @@
             // Clear result messages
             $("#result").text("");
             $("#weightCategory").text("");
+        });
+    
+</script> -->
+
+<script>
+    $(document).ready(function () {
+        $("#calculate").click(function () {
+            // Get the height and weight values from the input fields
+            var height = parseFloat($("#height").val());
+            var beforeweight = parseFloat($("#beforeweight").val());
+            var week = parseInt($("#week").val());
+            var nowweight = parseFloat($("#nowweight").val());
+            var startingWeightMin, startingWeightMax, weekMessage;
+
+            var heightInMeters = height / 100;
+
+            // Calculate BMI using nowweight
+            var nowbmi = nowweight / (heightInMeters * heightInMeters);
+            $("#beforebmi").val(nowbmi.toFixed(2));  // Display BMI before pregnancy
+
+            // Determine weight category based on BMI
+            if (nowbmi < 18.5) {
+                $("#weightCategory").text("Underweight");
+            } else if (nowbmi >= 18.5 && nowbmi <= 24.9) {
+                $("#weightCategory").text("Normal Weight");
+            } else if (nowbmi >= 25.0 && nowbmi <= 29.9) {
+                $("#weightCategory").text("Overweight");
+            } else if (nowbmi > 30.0) {
+                $("#weightCategory").text("Obese");
+            }
+
+            var twinOption = $("input[name='flexRadioDefault']:checked").attr("id");
+
+            if (twinOption === "twin2") {
+                switch (week) {
+                    
+                    case 1:
+                        startingWeightMin = 50.0;
+                        startingWeightMax = 50.0;
+                        break;
+                    case 2:
+                        startingWeightMin = 50.0;
+                        startingWeightMax = 50.2;
+                        break;
+                    case 3:
+                        startingWeightMin = 50.1;
+                        startingWeightMax = 50.3;
+                        break;
+                    case 4:
+                        startingWeightMin = 50.1;
+                        startingWeightMax = 50.5;
+                        break;
+                    case 5:
+                        startingWeightMin = 50.2;
+                        startingWeightMax = 50.7;
+                        break;
+                    case 6:
+                        startingWeightMin = 50.2;
+                        startingWeightMax = 50.8;
+                        break;
+                    case 7:
+                        startingWeightMin = 50.2;
+                        startingWeightMax = 51.0;
+                        break;
+                    case 8:
+                        startingWeightMin = 50.3;
+                        startingWeightMax = 51.2;
+                        break;
+                    case 9:
+                        startingWeightMin = 50.3;
+                        startingWeightMax = 51.3;
+                        break;
+                    case 10:
+                        startingWeightMin = 50.4;
+                        startingWeightMax = 51.5;
+                        break;
+                    case 11:
+                        startingWeightMin = 50.4;
+                        startingWeightMax = 51.7;
+                        break;
+                    case 12:
+                        startingWeightMin = 50.5;
+                        startingWeightMax = 51.8;
+                        break;
+                    case 13:
+                        startingWeightMin = 50.5;
+                        startingWeightMax = 52.0;
+                        break;
+                    case 14:
+                        startingWeightMin = 51.1;
+                        startingWeightMax = 52.8;
+                        break;
+                    case 15:
+                        startingWeightMin = 51.7;
+                        startingWeightMax = 53.7;
+                        break;
+                    case 16:
+                        startingWeightMin = 52.3;
+                        startingWeightMax = 54.5;
+                        break;
+                    case 17:
+                        startingWeightMin = 52.9;
+                        startingWeightMax = 55.3;
+                        break;
+                    case 18:
+                        startingWeightMin = 53.5;
+                        startingWeightMax = 56.2;
+                        break;
+                    case 19:
+                        startingWeightMin = 54.1;
+                        startingWeightMax = 57.0;
+                        break;
+                    case 20:
+                        startingWeightMin = 54.7;
+                        startingWeightMax = 57.8;
+                        break;
+                    case 21:
+                        startingWeightMin = 55.3;
+                        startingWeightMax = 58.7;
+                        break;
+                    case 22:
+                        startingWeightMin = 55.9;
+                        startingWeightMax = 59.5;
+                        break;
+                    case 23:
+                        startingWeightMin = 56.5;
+                        startingWeightMax = 60.3;
+                        break;
+                    case 24:
+                        startingWeightMin = 57.1;
+                        startingWeightMax = 61.2;
+                        break;
+                    case 25:
+                        startingWeightMin = 57.7;
+                        startingWeightMax = 62.0;
+                        break;
+                    case 26:
+                        startingWeightMin = 58.3;
+                        startingWeightMax = 62.8;
+                        break;
+                    case 27:
+                        startingWeightMin = 58.9;
+                        startingWeightMax = 63.7;
+                        break;
+                    case 28:
+                        startingWeightMin = 59.5;
+                        startingWeightMax = 64.5;
+                        break;
+                    case 29:
+                        startingWeightMin = 60.1;
+                        startingWeightMax = 65.3;
+                        break;
+                    case 30:
+                        startingWeightMin = 60.8;
+                        startingWeightMax = 66.2;
+                        break;
+                    case 31:
+                        startingWeightMin = 61.4;
+                        startingWeightMax = 67.0;
+                        break;
+                    case 32:
+                        startingWeightMin = 62.0;
+                        startingWeightMax = 67.8;
+                        break;
+                    case 33:
+                        startingWeightMin = 62.6;
+                        startingWeightMax = 68.7;
+                        break;
+                    case 34:
+                        startingWeightMin = 63.2;
+                        startingWeightMax = 69.5;
+                        break;
+                    case 35:
+                        startingWeightMin = 63.8;
+                        startingWeightMax = 70.3;
+                        break;
+                    case 36:
+                        startingWeightMin = 64.4;
+                        startingWeightMax = 71.2;
+                        break;
+                    case 37:
+                        startingWeightMin = 65.0;
+                        startingWeightMax = 72.0;
+                        break;
+                    case 38:
+                        startingWeightMin = 65.6;
+                        startingWeightMax = 72.8;
+                        break;
+                    case 39:
+                        startingWeightMin = 66.2;
+                        startingWeightMax = 73.7;
+                        break;
+                    case 40:
+                        startingWeightMin = 66.8;
+                        startingWeightMax = 74.5;
+                        break;
+                    default:
+                        startingWeightMin = 0;
+                        startingWeightMax = 0;
+                }
+            } else {
+                switch (week) {
+                   
+                   case 1:
+               startingWeightMin = 50.0;
+               startingWeightMax = 50.0;
+               break;
+           case 2:
+               startingWeightMin = 50.0;
+               startingWeightMax = 50.2;
+               break;
+           case 3:
+               startingWeightMin = 50.1;
+               startingWeightMax = 50.3;
+               break;
+           case 4:
+               startingWeightMin = 50.1;
+               startingWeightMax = 50.5;
+               break;
+           case 5:
+               startingWeightMin = 50.2;
+               startingWeightMax = 50.7;
+               break;
+           case 6:
+               startingWeightMin = 50.2;
+               startingWeightMax = 50.8;
+               break;
+           case 7:
+               startingWeightMin = 50.2;
+               startingWeightMax = 51.0;
+               break;
+           case 8:
+               startingWeightMin = 50.3;
+               startingWeightMax = 51.2;
+               break;
+           case 9:
+               startingWeightMin = 50.3;
+               startingWeightMax = 51.3;
+               break;
+           case 10:
+               startingWeightMin = 50.4;
+               startingWeightMax = 51.5;
+               break;
+           case 11:
+               startingWeightMin = 50.4;
+               startingWeightMax = 51.7;
+               break;
+           case 12:
+               startingWeightMin = 50.5;
+               startingWeightMax = 51.8;
+               break;
+           case 13:
+               startingWeightMin = 50.5;
+               startingWeightMax = 52.0;
+               break;
+           case 14:
+               startingWeightMin = 51.0;
+               startingWeightMax = 52.6;
+               break;
+           case 15:
+               startingWeightMin = 51.4;
+               startingWeightMax = 53.2;
+               break;
+           case 16:
+               startingWeightMin = 51.9;
+               startingWeightMax = 53.8;
+               break;
+           case 17:
+               startingWeightMin = 52.3;
+               startingWeightMax = 54.4;
+               break;
+           case 18:
+               startingWeightMin = 52.8;
+               startingWeightMax = 55.0;
+               break;
+           case 19:
+               startingWeightMin = 53.2;
+               startingWeightMax = 55.6;
+               break;
+           case 20:
+               startingWeightMin = 53.7;
+               startingWeightMax = 56.2;
+               break;
+           case 21:
+               startingWeightMin = 54.1;
+               startingWeightMax = 56.8;
+               break;
+           case 22:
+               startingWeightMin = 54.6;
+               startingWeightMax = 57.4;
+               break;
+           case 23:
+               startingWeightMin = 55.0;
+               startingWeightMax = 58.0;
+               break;
+           case 24:
+               startingWeightMin = 55.5;
+               startingWeightMax = 58.6;
+               break;
+           case 25:
+               startingWeightMin = 55.9;
+               startingWeightMax = 59.2;
+               break;
+           case 26:
+               startingWeightMin = 56.4;
+               startingWeightMax = 59.8;
+               break;
+           case 27:
+               startingWeightMin = 56.8;
+               startingWeightMax = 60.4;
+               break;
+           case 28:
+               startingWeightMin = 57.3;
+               startingWeightMax = 61.0;
+               break;
+           case 29:
+               startingWeightMin = 57.7;
+               startingWeightMax = 61.6;
+               break;
+           case 30:
+               startingWeightMin = 58.2;
+               startingWeightMax = 62.2;
+               break;
+           case 31:
+               startingWeightMin = 58.6;
+               startingWeightMax = 62.8;
+               break;
+           case 32:
+               startingWeightMin = 59.1;
+               startingWeightMax = 63.4;
+               break;
+           case 33:
+               startingWeightMin = 59.5;
+               startingWeightMax = 64.0;
+               break;
+           case 34:
+               startingWeightMin = 60.0;
+               startingWeightMax = 64.6;
+               break;
+           case 35:
+               startingWeightMin = 60.4;
+               startingWeightMax = 65.2;
+               break;
+           case 36:
+               startingWeightMin = 60.9;
+               startingWeightMax = 65.8;
+               break;
+           case 37:
+               startingWeightMin = 61.3;
+               startingWeightMax = 66.3;
+               break;
+           case 38:
+               startingWeightMin = 61.8;
+               startingWeightMax = 66.9;
+               break;
+           case 39:
+               startingWeightMin = 62.2;
+               startingWeightMax = 67.5;
+               break;
+           case 40:
+               startingWeightMin = 62.7;
+               startingWeightMax = 68.1;
+               break;
+           default:
+               startingWeightMin = 0;
+               startingWeightMax = 0;
+               }
+            }
+
+            var recommendedWeightRange = "";
+            if (twinOption === "twin2") {
+                recommendedWeightRange = `Recommended weight range when delivering (40th week): 66.8 - 74.5 kgs.`;
+            } else {
+                recommendedWeightRange = `Recommended weight range when delivering (40th week): 62.7 - 68.1 kgs.`;
+            }
+
+            var weekMessage = "";
+            if (nowweight >= startingWeightMin && nowweight <= startingWeightMax) {
+                weekMessage = `week# ${week}: ${startingWeightMin} - ${startingWeightMax} kgs. Your current weight is in this range.`;
+            } else {
+                var diff = nowweight < startingWeightMin
+                    ? (startingWeightMin - nowweight).toFixed(1)
+                    : (nowweight - startingWeightMax).toFixed(1);
+                weekMessage = `week# ${week}: ${startingWeightMin} - ${startingWeightMax} kgs. Your current weight is ${diff} kgs ${nowweight < startingWeightMin ? "below" : "above"} the recommended range. `;
+            }
+
+            $("#result").text(weekMessage);
+            $("#result1").text(recommendedWeightRange);
+
+        });
+
+        // Handle the clear button click
+        $("#Clear").click(function () {
+            // ... (your clear button code)
         });
     });
 </script>
